@@ -1,14 +1,53 @@
 package com.SwitBotPersonalProj;
 import swiftbot.*;
 
+import java.util.Scanner;
+
 public class SwiftBot {
-    // Use a package for each task
-    // Call the package and make sure each package has an entry method and one method that calls the entry method (could be a main method or init())
-    // Have a UI Handler
+
     SwiftBotAPI swiftBotAPI = SwiftBotAPI.INSTANCE;
+    Core core = new Core();
 
-    void init()
+    Scanner userInput = new Scanner(System.in);
+
+    public void init()
     {
+        displayMenu();
+        getUserInput();
+        processUserInput();
+    }
 
+    public void displayMenu()
+    {
+        core.ui.menu();
+    }
+
+    public void getUserInput()
+    {
+        try {
+            core.selectedTask = userInput.nextInt();
+
+            if(core.selectedTask < 1 || core.selectedTask > core.Tasks.length+1)
+            {
+                core.ui.throwErrorOnInvalidInput();
+                core.selectedTask = -1;
+                getUserInput();
+            }
+        } catch (Exception e) {
+            core.ui.throwErrorOnInvalidInput();
+            core.selectedTask = -1;
+            getUserInput();
+        }
+    }
+
+    public void processUserInput()
+    {
+        //calling the tasks
+        for(int i = 0; i<core.Tasks.length; i++)
+        {
+            String taskName = core.Tasks[core.selectedTask - 1];
+
+
+        }
     }
 }
