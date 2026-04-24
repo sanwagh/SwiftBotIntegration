@@ -10,16 +10,18 @@ import java.util.Scanner;
 
 public class SwiftBot {
 
-    SwiftBotAPI swiftBotAPI = SwiftBotAPI.INSTANCE;
     Core core = new Core();
-
     Scanner userInput = new Scanner(System.in);
 
     public void init()
     {
         displayMenu();
         getUserInput();
+        core.ui.displayTaskRunConfirmation();
+
         processUserInput();
+        core.ui.displayTaskCompletion();
+        System.exit(10);
     }
 
     public void displayMenu()
@@ -44,12 +46,10 @@ public class SwiftBot {
             getUserInput();
         }
 
-        core.ui.displayTaskRunConfirmation();
     }
 
     public void processUserInput()
     {
-        //calling the tasks
         if(core.selectedTask == 1)
         {
             DrawShapesFinal.main(new String[]{});
@@ -60,19 +60,16 @@ public class SwiftBot {
         }
         else if (core.selectedTask == 3)
         {
-            SpyBot.main(new String[]{}); //Main class from NoughtsAndCrosses class
+            SpyBot.main(new String[]{});
         }
         else if (core.selectedTask == 4)
         {
-            TrafficLights.main(new String[]{}); //Main class from NoughtsAndCrosses class
+            TrafficLights.main(new String[]{});
         }
         else if (core.selectedTask == 5)
         {
-            ZigzagOG.main(new String[]{}); //Main class from NoughtsAndCrosses class
+            ZigzagOG.main(new String[]{});
         }
-
-        core.ui.displayTaskCompletion();
-        System.exit(10);
     }
 
     public static void main(String[] args) {
