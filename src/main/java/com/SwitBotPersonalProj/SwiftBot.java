@@ -43,11 +43,9 @@ public class SwiftBot {
     public void processUserInput()
     {
         //calling the tasks
-        for(int i = 0; i<core.Tasks.length; i++)
+        if(core.selectedTask == 1)
         {
-            String taskName = core.Tasks[core.selectedTask - 1];
-
-
+            
         }
     }
 }

@@ -27,6 +27,12 @@ public class UIHandler {
         System.out.println("Enter a number to select the task and press ENTER: ");
     }
 
+    public void displayTaskRunConfirmation()
+    {
+        printDashLine();
+        System.out.println("Running Task: " + core.Tasks[core.selectedTask-1]);
+    }
+
     public void throwErrorOnInvalidInput()
     {
         System.out.println("[ERROR]: Invalid number entered. Please enter a number corresponding to the task you want to run.");
