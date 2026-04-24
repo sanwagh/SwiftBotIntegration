@@ -29,7 +29,7 @@ public class UIHandler {
 
     public void throwErrorOnInvalidInput()
     {
-
+        System.out.println("[ERROR]: Invalid number entered. Please enter a number corresponding to the task you want to run.");
     }
 
     public void clearTerminalScreen()
