@@ -12,7 +12,7 @@ public class UIHandler {
     public void menu()
     {
         printDoubleLine();
-        System.out.println("SWIFTBOT - MAIN MENU");
+        System.out.println("          SWIFTBOT - MAIN MENU");
         printDoubleLine();
 
         System.out.println("Select a task:");
@@ -31,6 +31,12 @@ public class UIHandler {
     {
         printDashLine();
         System.out.println("Running Task: " + core.Tasks[core.selectedTask-1]);
+    }
+
+    public void displayTaskCompletion()
+    {
+        printDashLine();
+        System.out.println("Finished Running Task: " + core.Tasks[core.selectedTask-1]);
     }
 
     public void throwErrorOnInvalidInput()
