@@ -2,6 +2,7 @@ package com.SwitBotPersonalProj;
 import com.SwitBotPersonalProj.Dance.TaskDance;
 import com.SwitBotPersonalProj.DrawAShape.DrawShapesFinal;
 import com.SwitBotPersonalProj.NoughtsAndCrosses.Main;
+import com.SwitBotPersonalProj.SnakesLadders.SLMain;
 import com.SwitBotPersonalProj.SpyBot.SpyBot;
 import com.SwitBotPersonalProj.TrafficLight.TrafficLights;
 import com.SwitBotPersonalProj.ZigZag.ZigzagOG;
@@ -14,8 +15,7 @@ public class SwiftBot {
     Core core = new Core();
     Scanner userInput = new Scanner(System.in);
 
-    public void init()
-    {
+    public void init() throws Exception {
         displayMenu();
         getUserInput();
         core.ui.displayTaskRunConfirmation();
@@ -49,8 +49,7 @@ public class SwiftBot {
 
     }
 
-    public void processUserInput()
-    {
+    public void processUserInput() throws Exception {
         if(core.selectedTask == 1)
         {
             TaskDance.main(new String[]{});
@@ -65,7 +64,7 @@ public class SwiftBot {
         }
         else if (core.selectedTask == 4)
         {
-
+            SLMain.main(new String[]{});
         }
         else if (core.selectedTask == 5)
         {
@@ -81,7 +80,7 @@ public class SwiftBot {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         SwiftBot run = new SwiftBot();
         run.init();
     }
