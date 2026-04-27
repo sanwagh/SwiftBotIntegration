@@ -45,6 +45,8 @@ public class SwiftBot {
             core.ui.throwErrorOnInvalidInput();
             core.selectedTask = -1;
             getUserInput();
+            userInput.next();
+            return;
         }
 
     }
