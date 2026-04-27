@@ -1,0 +1,3 @@
+javac -cp .:SwiftBot-API-6.0.0.jar com/SwitBotPersonalProj/*.java com/SwitBotPersonalProj/ZigZag/*.java com/SwitBotPersonalProj/TrafficLight/*.java com/SwitBotPersonalProj/SpyBot/*.java com/SwitBotPersonalProj/NoughtsAndCrosses/*.java com/SwitBotPersonalProj/DrawAShape/*.java com/SwitBotPersonalProj/Dance/*.javacom/SwitBotPersonalProj/SnakesLadders/*.java
+
+java -cp .:SwiftBot-API-6.0.0.jar com.SwitBotPersonalProj.SwiftBot
