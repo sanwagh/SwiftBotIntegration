@@ -1,4 +1,5 @@
 package com.SwitBotPersonalProj;
+import com.SwitBotPersonalProj.Dance.TaskDance;
 import com.SwitBotPersonalProj.DrawAShape.DrawShapesFinal;
 import com.SwitBotPersonalProj.NoughtsAndCrosses.Main;
 import com.SwitBotPersonalProj.SpyBot.SpyBot;
@@ -52,21 +53,29 @@ public class SwiftBot {
     {
         if(core.selectedTask == 1)
         {
-            DrawShapesFinal.main(new String[]{});
+            TaskDance.main(new String[]{});
         }
-        else if (core.selectedTask == 2)
+       else if(core.selectedTask == 2)
         {
-            Main.main(new String[]{}); //Main class from NoughtsAndCrosses class
+            DrawShapesFinal.main(new String[]{});
         }
         else if (core.selectedTask == 3)
         {
-            SpyBot.main(new String[]{});
+            Main.main(new String[]{}); //Main class from NoughtsAndCrosses class
         }
         else if (core.selectedTask == 4)
         {
-            TrafficLights.main(new String[]{});
+
         }
         else if (core.selectedTask == 5)
+        {
+            SpyBot.main(new String[]{});
+        }
+        else if (core.selectedTask == 6)
+        {
+            TrafficLights.main(new String[]{});
+        }
+        else if (core.selectedTask == 7)
         {
             ZigzagOG.main(new String[]{});
         }
